@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: #f5f7fb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .form-container {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .form-contents {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      label {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #0a192f;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #d0d7e2;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border 0.2s ease;
+      }
+
+      input:focus {
+        border: 1px solid #0a192f;
+      }
+
+      textarea {
+        width: 100%;
+        min-height: 140px;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #d0d7e2;
+        font-size: 0.95rem;
+        resize: vertical;
+        outline: none;
+        transition: border 0.2s ease;
+      }
+
+      textarea:focus {
+        border: 1px solid #0a192f;
+      }
+
+      button {
+        margin-top: 10px;
+        padding: 12px;
+        border: none;
+        border-radius: 30px;
+        background: #0a192f;
+        color: #ffffff;
+        font-size: 0.95rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 600px) {
+        .form-contents {
+          padding: 30px;
+        }
+
+        input {
+          font-size: 0.9rem;
+        }
+
+        textarea {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="form-container">
+      <div class="form-contents">
+        <form>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@gmail.com"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Your message"
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
